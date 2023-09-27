@@ -23,3 +23,5 @@ $ vale .
 ```
 
 `modules/test.adoc:3:18` should not flag a Vale error.
+
+![image](https://github.com/aireilly/vale-test/assets/74046732/3f50df03-c854-40a1-8018-9c58e6e17c01)
