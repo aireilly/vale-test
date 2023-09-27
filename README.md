@@ -1,6 +1,6 @@
 # Vale test
 
-This Vale test case reproduces an error which is found in VS Code, Sublime, and Vale CLI.
+This Vale test case reproduces an error which is found in VS Code, Sublime with `vale-ls`, and Vale CLI.
 
 ```cmd
 ┌───── ~/vale-test (test-case)*
@@ -24,4 +24,5 @@ $ vale .
 
 `modules/test.adoc:3:18` should not flag a Vale error.
 
-![image](https://github.com/aireilly/vale-test/assets/74046732/3f50df03-c854-40a1-8018-9c58e6e17c01)
+![image](https://github.com/aireilly/vale-test/assets/74046732/5f48800a-b820-4df4-9d85-9ad312c1829a)
+
