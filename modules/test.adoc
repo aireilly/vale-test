@@ -4,11 +4,11 @@
 
 grandmaster clock.
 
-Master and commander is a decent film.
+Master
 
-Another instance of master.
+and commander is a decent film.
 
 //This triggers the string "master" in the id to be highlighted.
 master
 
-This sentence is unrelated by does contain the term "master".
+This sentence is unrelated but does contain the term "master".
