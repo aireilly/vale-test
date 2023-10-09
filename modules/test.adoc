@@ -1,0 +1,9 @@
+// Single line comment does not trigger an error
+[[test-case]]
+= Test case
+
+////
+Multi-line comments cause a fatal error
+////
+
+The term "Master" should trigger an error.
