@@ -1,0 +1,6 @@
+extends: occurrence
+message: 'Use the word "Test" at least once'
+level: error
+scope: sentence
+min: 1
+token: Test
