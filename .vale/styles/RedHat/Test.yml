@@ -1,6 +1,10 @@
-extends: occurrence
-message: 'Use the word "Test" at least once'
+---
+extends: substitution
+ignorecase: false
 level: error
-scope: sentence
-min: 1
-token: Test
+message: "Use %s rather than %s."
+action:
+  name: replace
+swap:
+  Mutual TLS: mutual TLS
+  VNIC: vNIC
