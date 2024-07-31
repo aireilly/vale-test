@@ -1,5 +1,7 @@
 = Example topic
 
-Ensure that all traffic on the wire is encrypted and the endpoints are identifiable. An example of this is Mutual TLS, or mTLS, which is a method for mutual authentication.
+// Quick fix not populated properly
+https://github.com/project
 
-. In **Primary VNIC IP addresses > Primary network**, select a VCN, such as *oci-cluster-vcn*.
+//Quick fix populated
+https://gitlab.com/project

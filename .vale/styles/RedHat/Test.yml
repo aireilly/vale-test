@@ -1,10 +1,12 @@
 ---
-extends: substitution
-ignorecase: false
+extends: existence
 level: error
-message: "Use %s rather than %s."
+link: https://redhat-documentation.github.io/vale-at-red-hat/docs/main/reference-guide/gitlinks/
+message: Do not include a link to Git projects ('%s') in documentation source unless it is explicitly approved.
+scope: raw
+nonword: true
 action:
-  name: replace
-swap:
-  Mutual TLS: mutual TLS
-  VNIC: vNIC
+  name: remove
+tokens:
+  - 'gitlab'
+  - 'https:\/\/github\.com\/.*'
