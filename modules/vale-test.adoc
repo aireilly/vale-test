@@ -1,7 +1,4 @@
 = Example topic
 
 // Quick fix not populated properly
-https://github.com/project
-
-//Quick fix populated
-https://gitlab.com/project
+https://github.com/not-allowed

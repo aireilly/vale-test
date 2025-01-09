@@ -1,12 +1,12 @@
 ---
 extends: existence
-level: error
+message: Do not include a link to %s unless it is explicitly approved.
 link: https://redhat-documentation.github.io/vale-at-red-hat/docs/main/reference-guide/gitlinks/
-message: Do not include a link to Git projects ('%s') in documentation source unless it is explicitly approved.
+ignorecase: true
+level: warning
 scope: raw
-nonword: true
 action:
   name: remove
 tokens:
-  - 'gitlab'
-  - 'https:\/\/github\.com\/.*'
+  - 'https:\/\/gitlab\.com'
+  - 'https:\/\/github\.com(?!\/openshift|\/redhat-developer)'
