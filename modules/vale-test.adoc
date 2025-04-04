@@ -1,4 +1,6 @@
-= Example topic
+// Comments with strings containing "//" cause errors to be incorectly located in the output
+// https://github.com/RedHatTraining/RH354/blob/main/guides/en-US/sg-chapters/topics/preview/preview-overview.adoc?plain=1
+= Test topic
 
-// Quick fix not populated properly
-https://github.com/not-allowed
+A little endian system stores data in memory ordered least-significant byte first and most-significant byte last, opposite to the behavior of a big-endian system.
+The advantage to running POWER processors in little endian mode is that it makes it simpler for programmers to port applications from x86_64 to POWER.

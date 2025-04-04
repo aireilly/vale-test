@@ -1,12 +1,12 @@
 ---
-extends: existence
-message: Do not include a link to %s unless it is explicitly approved.
-link: https://redhat-documentation.github.io/vale-at-red-hat/docs/main/reference-guide/gitlinks/
-ignorecase: true
-level: warning
-scope: raw
-action:
-  name: remove
-tokens:
-  - 'https:\/\/gitlab\.com'
-  - 'https:\/\/github\.com(?!\/openshift|\/redhat-developer)'
+extends: conditional
+ignorecase: false
+level: error
+link: https://redhat-documentation.github.io/vale-at-red-hat/docs/main/reference-guide/definitions/
+message: "Define acronyms and abbreviations (such as '%s') on first occurrence if they're likely to be unfamiliar."
+# source: "IBM - Abbreviations, p. 1"
+# Ensures that the existence of 'first' implies the existence of 'second'.
+first: '\b([A-Z]{3,5}s?)\b'
+second: '\(([A-Z]{3,5}s?)\)'
+exceptions:
+  # - POWER

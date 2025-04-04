@@ -1,17 +1,27 @@
-  # Vale test
+# Vale test
 
-Vale 3.9.3 causes our Rules CI to fail.
+AsciiDoc files with comments strings containing "//" cause errors to be incorrectly located in the output.
 
 ```cmd
-panic: runtime error: index out of range [-1]
-goroutine 20 [running]: 
-github.com/errata-ai/vale/v3/internal/core.ToSentence({0x2d41360?, 0x0, 0xc00219c0a0?}, {0xeb0226, 0x2}) 
-  github.com/errata-ai/vale/v3/internal/core/util.go:80 +0x316 
-github.com/errata-ai/vale/v3/internal/check.Substitution.Run({{{{0xc001dffa78, 0x7}, {0x0, 0x0, 0x0}}, {0x0, 0x0}, {0xc001dff9e0, 0xc}, {0xc001dffa00, ...}, ...}, ...}, ...) 
-  github.com/errata-ai/vale/v3/internal/check/substitution.go:135 +0x896
+$ vale modules/vale-test.adoc
+
+ modules/vale-test.adoc
+ 5:21   suggestion  Define acronyms and             RedHat.Test 
+                    abbreviations (such as                      
+                    'POWER') on first occurrence                
+                    if they're likely to be                     
+                    unfamiliar.                                 
+ 5:140  suggestion  Define acronyms and             RedHat.Test 
+                    abbreviations (such as                      
+                    'POWER') on first occurrence                
+                    if they're likely to be                     
+                    unfamiliar.                                 
+
+✔ 0 errors, 0 warnings and 2 suggestions in 1 file.
 ```
 
+To replicate the error:
 
 ```cmd
-git clone -b vale-test-6 https://github.com/aireilly/vale-test && vale vale-test/modules/vale-test.adoc
+git clone -b vale-test-7 https://github.com/aireilly/vale-test && vale vale-test/modules/vale-test.adoc
 ```
